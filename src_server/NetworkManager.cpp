@@ -48,7 +48,7 @@ void NetworkManager::Run()
 
 
 
-			stdOut << "Message: " << datagram.GetBuffer() << endl;
+			stdOut << "Message: " << (char *)datagram.GetBuffer() << endl;
 		}
 	}
 

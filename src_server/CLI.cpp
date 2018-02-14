@@ -54,7 +54,7 @@ void CLI::Run()
 	ByteString line;
 	LinkedList<ByteString> commandLine;
 
-	TextReader inputReader(stdIn);
+	TextReader inputReader(stdIn, TextCodecType::ASCII);
 
 	stdOut << "OpenSpace server successfully launched." << endl << "Welcome, Admin..." << endl;
 
@@ -71,7 +71,7 @@ void CLI::Run()
 			continue;
 		}
 
-		commandLine.Remove(0);
+		commandLine.Remove(0u);
 
 		(*it).value->Execute(commandLine);
 	}

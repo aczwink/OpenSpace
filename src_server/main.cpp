@@ -27,9 +27,11 @@ int32 NetworkThread()
 	return EXIT_SUCCESS;
 }
 
-int32 Main(const String &refProgramName, const LinkedList<String> &refArgs)
+int32 Main(const String &programName, const FixedArray<String> &args)
 {
 	Thread networkManagerThread(NetworkThread);
+
+	networkManagerThread.Start();
 
 	CLI::Instance().Run();
 	networkManagerThread.Join();

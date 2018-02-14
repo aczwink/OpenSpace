@@ -22,7 +22,7 @@ class Command
 {
 public:
 	//Abstract
-	virtual void Execute(const LinkedList<ByteString> &args) const = NULL;
-	virtual ByteString GetDescription() const = NULL;
-	virtual ByteString GetName() const = NULL;
+	virtual void Execute(const LinkedList<ByteString> &args) const = 0;
+	virtual ByteString GetDescription() const = 0;
+	virtual ByteString GetName() const = 0;
 };
